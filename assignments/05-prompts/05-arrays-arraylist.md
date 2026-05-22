@@ -1,43 +1,39 @@
-# Arrays e ArrayList em Java
+                                                     Arrays e ArrayList em Java
 
-## Arrays unidimensionais
 
-* Explique como declarar, instanciar e inicializar arrays unidimensionais em Java, incluindo os valores padrão atribuídos pela JVM.
-* Mostre como acessar elementos, percorrer com laços `for` e `enhanced for`, e evitar erros como `ArrayIndexOutOfBoundsException`.
-* Demostre alguns exemplos de maniputação de arrays manipule arrays (inversão, busca, contagem de ocorrências) usando apenas recursos básicos da linguagem.
-* Apresente a classa `java.lang.Arrays` e explique como o resultado dos exemplos anterioes podem ser alcançados.
-* Descreva um processo de depuração em que um array não é inicializado corretamente e comente como corrigir passo a passo.
-* Implemente um algoritmo simples (ex.: cálculo de média) e discuta como tratar arrays vazios ou nulos.
-* Por que arrays continuam úteis em Java mesmo com a disponibilidade de coleções mais flexíveis?
 
----
+Introdução.
+Java possui diversas estruturas para armazenar dados. Entre as mais utilizadas estão os arrays e
+o ArrayList. Os arrays possuem tamanho fixo, enquanto o ArrayList permite adicionar e remover
+elementos dinamicamente.
 
-## Arrays multidimensionais e utilitários
 
-* Descreva a sintaxe de arrays multidimensionais (`int[][]`) e diferencie arrays retangulares de arrays irregulares.
-* Demosntre exemplos que preencham e percorram matrizes, mapeando índices para posições lógicas (linhas, colunas).
-* Demonstre o uso da classe `java.util.Arrays` (`sort`, `fill`, `copyOf`, `binarySearch`, `toString`) aplicando cada método em arrays reais.
-* Demostre como transformar uma matriz em lista de valores e vice-versa, discutindo usos em algoritmos.
-* Simule um caso de uso que calcule tabelas (ex.: notas de alunos) explorando métodos utilitários para análise.
-* Quais armadilhas surgem ao trabalhar com arrays multidimensionais e como evitá-las em projetos maiores?
+1. Arrays Unidimensionais
+Arrays armazenam vários valores do mesmo tipo em posições indexadas. Exemplo: int[] numeros =
+{10, 20, 30}; Para percorrer um array pode-se utilizar o laço for tradicional ou o enhanced for.
+Também é importante evitar acessar posições inválidas para não ocorrer
+ArrayIndexOutOfBoundsException.
+A classe Arrays oferece métodos úteis: sort() - ordena elementos binarySearch() - realiza busca
+fill() - preenche posições copyOf() - cria cópias toString() - exibe o conteúdo 2. Arrays
+Multidimensionais
+Arrays multidimensionais são usados para representar tabelas e matrizes. Exemplo: int[][] matriz =
+new int[3][3]; Os elementos são acessados por linha e coluna. Em matrizes irregulares, cada linha
+pode possuir tamanhos diferentes.
 
----
 
-## ArrayList e Coleções Dinâmicas
+3. ArrayList
+O ArrayList faz parte do framework Collections e possui tamanho dinâmico. Exemplo:
+ArrayList<String> nomes = new ArrayList<>(); Principais métodos: add() get() set() remove() size()
+isEmpty() É muito utilizado em aplicações como listas de produtos, alunos e carrinhos de compras.
 
-* Explique o que é a classe `ArrayList`, como declará-la com generics e como ela armazena elementos internamente.
-* Demonstre operações básicas (`add`, `get`, `set`, `remove`, `size`, `isEmpty`) e iteração usando laços e `Iterator`.
-* Apresente o uso de listas dinâmicas (ex.: carrinho de compras) enfatizando validação de entradas.
-* Mostre como lidar com `ArrayList` de objetos personalizados, incluindo sobrescrita de `equals` e `hashCode` quando relevante.
-* Apresente uma visão geral o framework Collections, que será estudado de forma aprodundada mais adianta, destacando como o `ArrayList` se integra ao restante do framework Collections em Java?
 
----
+4. Comparação entre Array e ArrayList
+Array: tamanho fixo, melhor desempenho e suporte direto a tipos primitivos.
+ArrayList: tamanho dinâmico, maior flexibilidade e diversos métodos prontos.
 
-## Comparando Arrays e ArrayList
 
-* Elabore uma tabela comparativa entre arrays e `ArrayList`, destacando diferenças de tamanho, tipos suportados, desempenho e flexibilidade.
-* Demonstre como converter de array para `ArrayList` e vice-versa usando `Arrays.asList`, `List.of`, `toArray` e construtores apropriados.
-* Apresente exemplos onde a escolha da estrutura adequada para diferentes requisitos (memória fixa, inserções frequentes, acesso randomico) faz diferença.
-* Analise casos em que arrays primitivos são preferíveis por desempenho e situações em que a flexibilidade do `ArrayList` compensa.
-* Simule uma refatoração que substitui arrays por `ArrayList` e discuta impactos em APIs públicas e compatibilidade.
-* Quais critérios guiam a decisão entre arrays e listas no design de uma aplicação Java?
+Conclusão.
+Arrays e ArrayList são estruturas importantes na linguagem Java. Arrays são indicados quando o
+tamanho dos dados já é conhecido, enquanto ArrayList é mais adequado para situações em que a
+quantidade de elementos pode variar durante a execução do programa. A escolha depende das
+necessidades do projeto.  
